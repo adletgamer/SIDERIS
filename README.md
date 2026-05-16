@@ -66,5 +66,6 @@ SIDERIS is designed from day one to scale into an Enterprise SaaS integration la
 ## 🚀 Getting Started
 
 ### Prerequisites
-Ensure you have the Midnight Sandbox and Compact compiler configured in your environment.
-
+Ensure you have the Midnight Sandbox, Compact compiler, and `pnpm` installed globally.
+```bash
+corepack enable pnpm
