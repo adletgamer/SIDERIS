@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { background: #090D16; color: #FFFFFF; }
+  body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  ::selection { background: rgba(99,102,241,0.35); color: #fff; }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+  .font-tabular { font-variant-numeric: tabular-nums; }
+  .zk-scan-line {
+    position: relative; overflow: hidden;
+  }
+  .zk-scan-line::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(99,102,241,0.35), transparent);
+    animation: zkScan 1.6s linear infinite;
+  }
+  .isolate-dashed {
+    border: 1.5px dashed rgba(99,102,241,0.35);
+    border-radius: 12px;
+  }
+}
